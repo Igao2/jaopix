@@ -20,7 +20,7 @@ function calc()
     
    
     
-    //"
+  
   fetch(`https://date-api-sikn.onrender.com/diferencadatas?datai=15/10/2023&h1=18:10&dataf=${formattedDate}&h2=${formattedTime}&format=YMdhm`) // Substitua "/endpoint" pelo seu endpoint específico
   .then(response => response.json())
   .then(data =>{

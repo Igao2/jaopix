@@ -21,7 +21,7 @@ function calc()
    
     
   
-  fetch(`https://date-api-sikn.onrender.com/diferencadatas?datai=15/10/2023&h1=18:10&dataf=${formattedDate}&h2=${formattedTime}&format=YMdhm`) // Substitua "/endpoint" pelo seu endpoint específico
+  fetch(`https://date-api-sikn.onrender.com/diferencadatas?datai=15/10/2023&h1=18:00&dataf=${formattedDate}&h2=${formattedTime}&format=YMdhm`) // Substitua "/endpoint" pelo seu endpoint específico
   .then(response => response.json())
   .then(data =>{
     const result = data.result;
@@ -38,8 +38,28 @@ function calc()
    
 
 }
-setInterval(calc,1000)
+
+function calcz()
+{
+  var horario = document.getElementById("horario")
+    var agora = new Date();
+
+
+    var dataAlvo = new Date(2023, 10, 15, 18, 0, 0);
+  const diffMs = Math.abs(agora - dataAlvo);
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const diffMonths = Math.floor(diffDays/30);
+    const diffYears = Math.floor(diffDays/365);
+    const diffHours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const diffMinutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+    var segundos = Math.floor((diffMs % (1000 * 60)) / 1000);
+    var exibr =diffYears+" anos, "+diffMonths+" meses, "+diffDays+ " dias, "+ diffHours + ":"+ diffMinutes+ ":"+segundos+" horas, sem o João fazer o pix"
+    horario.innerHTML = exibr;
+}
 
 document.addEventListener("DOMContentLoaded",function(){
-    calc()
+
+  setInterval(calcz(),1000)
+
+    setTimeout(setInterval(calc,1000),10000);
 })

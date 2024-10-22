@@ -61,5 +61,5 @@ document.addEventListener("DOMContentLoaded",function(){
 
   setInterval(calcz(),1000)
 
-    setTimeout(setInterval(calc,1000),10000);
+    setTimeout(setInterval(calc,1000),2000);
 })

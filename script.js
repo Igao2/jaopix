@@ -26,24 +26,24 @@ function calc()
     
     if(anos>1)
     {
-      x = "ano";
+      x = "anos";
     }
     else{
-      x = "anos";
+      x = "ano";
     }
   if(meses>1)
     {
-      y = "mês";
+      y = "meses";
     }
     else{
-      y = "meses";
+      y = "mês";
     }
    if(dias>1)
     {
-      z = "dia";
+      z = "dias";
     }
     else{
-      z = "dias";
+      z = "dia";
     }
   
 

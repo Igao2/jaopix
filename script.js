@@ -23,6 +23,7 @@ function calc()
     var x;
     var y;
     var z;
+    var v;
     
     if(anos>1)
     {
@@ -45,9 +46,16 @@ function calc()
     else{
       z = "dia";
     }
-  
+    if(horas>1)
+    {
+      c = "horas";
+    }
+    else{
+      c = "hora"
+    }
+    
 
-    var exibr = `${anos} ${x}, ${meses} ${y} , ${dias} ${z}, ${horas}:${minutos}:${segundos} horas, sem o João fazer o pix`;
+    var exibr = `${anos} ${x}, ${meses} ${y} , ${dias} ${z}, ${horas}:${minutos}:${segundos} ${c}, sem o João fazer o pix`;
 
     const horario = document.getElementById("horario")
     console.log(exibr);

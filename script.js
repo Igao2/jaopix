@@ -2,7 +2,7 @@ function calc()
 {
   
     var agora = new Date();
-    var dataAlvo = new Date(2023, 9, 15, 18, 0, 0);  // ATENÇÃO: mês começa do 0 (janeiro = 0). Outubro = 9
+    var dataAlvo = new Date(2023, 9, 15, 18, 0, 0);  
 
     var diferenca = agora - dataAlvo;
 
@@ -20,8 +20,34 @@ function calc()
     var horas = totalHoras % 24;
     var minutos = totalMinutos % 60;
     var segundos = totalSegundos % 60;
+    var x;
+    var y;
+    var z;
+    
+    if(anos>1)
+    {
+      x = "ano";
+    }
+    else{
+      x = "anos";
+    }
+  if(meses>1)
+    {
+      y = "mês";
+    }
+    else{
+      y = "meses";
+    }
+   if(dias>1)
+    {
+      z = "dia";
+    }
+    else{
+      z = "dias";
+    }
+  
 
-    var exibr = `${anos} anos, ${meses} meses, ${dias} dias, ${horas}:${minutos}:${segundos} horas, sem o João fazer o pix`;
+    var exibr = `${anos} ${x}, ${meses} ${y} , ${dias} ${z}, ${horas}:${minutos}:${segundos} horas, sem o João fazer o pix`;
 
     const horario = document.getElementById("horario")
     console.log(exibr);
